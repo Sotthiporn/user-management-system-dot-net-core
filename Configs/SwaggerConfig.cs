@@ -8,6 +8,12 @@ namespace user_management_dot_net_core.Configs
             {
                 services.AddSwaggerGen(c =>
                 {
+                    c.SwaggerDoc("v1", new OpenApiInfo
+                    {
+                        Title = "User Management System - .NET Core",
+                        Description = "User Management System - .NET Core API documentation", 
+                        Version = "1.0"
+                    });
                     c.AddSecurityDefinition("Bearer", new OpenApiSecurityScheme
                     {
                         In = ParameterLocation.Header,
